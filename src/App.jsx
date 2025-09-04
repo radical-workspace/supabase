@@ -4,6 +4,8 @@ import "./App.css";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import Chat from "./components/Chat";
+import AdminDashboard from "./components/AdminDashboard";
+import UserDashboard from "./components/UserDashboard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AppContextProvider, useAppContext } from "./context/appContext";
 
@@ -36,6 +38,26 @@ function App() {
                   <>
                     <Header />
                     <Chat />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/admin"
+                element={
+                  <>
+                    <Header />
+                    <AdminDashboard />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/dashboard"
+                element={
+                  <>
+                    <Header />
+                    <UserDashboard />
                     <Footer />
                   </>
                 }
